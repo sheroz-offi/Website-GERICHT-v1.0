@@ -1,0 +1,498 @@
+@import "setting.scss";
+
+.container {
+  width: 87.5%;
+  margin: auto;
+  padding: 0px 40px;
+  max-width: 2632px;
+}
+
+.btn-gold {
+  @include Btn(
+    none,
+    0px,
+    $c-lighGl,
+    $c-black,
+    pointer,
+    8px 32px
+  ); //$btn-b, $btn-br, $btn-bg, $btn-tc, $btn-cur, $btn-pad
+  @include Text(16px, normal, 700, 28px, start, $c-black);
+  transition: all 0.3s;
+
+  &:active {
+    background: rgb(12, 12, 12);
+    color: $c-lighGl;
+    border: solid 0.1px $c-lighGl;
+    transition: all 0.3s;
+  }
+}
+
+.sec {
+  background-image: url(../img/bg\ one.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  @include PadMarg(0px 0px 150px 0px, 0px);
+}
+
+.header {
+  @include Flex(
+    flex,
+    center,
+    space-between,
+    normal,
+    30px
+  ); //$ds, $ai, $jc, $fd, $gp
+  @include PadMarg(30px, 0px);
+
+  .header-left {
+    .header-left-logo {
+      @include Text(
+        42px,
+        normal,
+        700,
+        57.2px,
+        center,
+        $c-white
+      ); //$fsz, $fst, $fw, $lh, $ta, $txt-cl, $ffam
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+  .header-center {
+    @include Flex(flex, center, center, normal, 30px); //$ds, $ai, $jc, $fd, $gp
+    .header-center-a {
+      @include Text(
+        14px,
+        normal,
+        400,
+        28px,
+        center,
+        $c-white
+      ); //$fsz, $fst, $fw, $lh, $ta, $txt-cl
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+
+      &::after {
+        content: "";
+        display: block;
+        background: linear-gradient(
+          92.09deg,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0.654),
+          rgba(255, 255, 255, 0)
+        );
+        height: 2px;
+        width: 2px;
+        border-radius: 10px;
+        transition: all 1s;
+        width: 0;
+        margin: 0 auto;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  .header-right {
+    @include Flex(flex, center, space-between, normal, 30px);
+    .header-right-p {
+      @include Text(
+        14px,
+        normal,
+        600,
+        28px,
+        center,
+        $c-white
+      ); //$fsz, $fst, $fw, $lh, $ta, $txt-cl, $ffam
+      font-family: "Open Sans", sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        display: block;
+        background: linear-gradient(
+          92.09deg,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0.654),
+          rgba(255, 255, 255, 0)
+        );
+        height: 2px;
+        width: 2px;
+        border-radius: 10px;
+        transition: all 1s;
+        width: 0;
+        margin: 0 auto;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+    .header-right-band {
+      width: 1.5px;
+      height: 40px;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.654),
+        rgba(255, 255, 255, 0)
+      );
+      border: none;
+      border-radius: 100%;
+    }
+  }
+  .burger-menu {
+    @include Flex(none, center, center, column, 5px);
+    .burger-item-l {
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+    .burger-item-r {
+      cursor: pointer;
+    }
+  }
+  .pop-up-fixed-block {
+    @include WiHi(30px, 30px);
+    @include PosT(fixed, 0, 0, 8);
+    @include Flex(flex, center, center, column, 0px);
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
+.main {
+  position: relative;
+  .main-img-restaurant {
+    @include Flex(flex, center, center, normal, 0px);
+    .img-res {
+      border: 2px solid $c-lighGl;
+      height: 100vh;
+    }
+    .img-text-scroll {
+      position: absolute;
+      bottom: -55px;
+      z-index: 2;
+    }
+  }
+  .main-text-restaurant {
+    @include Flex(flex, center, center, normal, 30px);
+    .main-text-big {
+      @include Text(
+        181px,
+        normal,
+        700,
+        235.3px,
+        center,
+        $c-white
+      ); //$fsz, $fst, $fw, $lh, $ta, $txt-cl
+      @include Pos(absolute, 0, 0, 35%, 0, 2); //$pos, $bt, $rg, $tp, $lf, $z-i
+      transition: all 2s;
+    }
+  }
+  .main-small-txt-box {
+    @include Flex(flex, center, center, normal, 30px);
+    @include PosT(absolute, 100px, -25px, 2);
+    transform: rotate(270deg);
+
+    .main-txt-small {
+      @include Text(16px, normal, 400, 28px, center, $c-white);
+      text-decoration: none;
+      font-family: "Open Sans", sans-serif;
+    }
+  }
+  .main-small-num-box {
+    @include Flex(flex, center, center, normal, 10px);
+    @include PosB(absolute, 100px, -100px, 2);
+    transform: rotate(90deg);
+
+    .main-num-small {
+      @include Text(18px, normal, 400, 28px, center, $c-white);
+      @include Flex(flex, center, center, normal, 10px);
+      text-decoration: none;
+      transition: all 1s;
+      cursor: pointer;
+    }
+
+    .active::after {
+      content: "";
+      background: $c-lighGl;
+      height: 1.5px;
+      width: 20px;
+      border-radius: 10px;
+      transition: all 1s;
+      margin: 0 auto;
+    }
+  }
+}
+
+.secBlack {
+  background: rgb(12, 11, 8);
+  @include PadMarg(150px 0, 0px);
+  position: relative;
+}
+
+.selective-date-block {
+  @include Flex(flex, center, center, column, 60px);
+  @include PadMarg(30px, 0px);
+  max-width: 1364px;
+  height: auto;
+  background: #0c0c0c;
+  border: 1px solid rgba(220, 202, 135, 0.2);
+
+  .selective-texts {
+    @include Flex(flex, center, center, column, 20px);
+
+    .selective-txt-p {
+      @include Text(
+        23px,
+        normal,
+        400,
+        29.9px,
+        center,
+        $c-white
+      ); //$fsz, $fst, $fw, $lh, $ta, $txt-cl
+    }
+
+    .selective-txt-h2 {
+      @include Text(64px, normal, 700, 83.2px, center, $c-lighGl);
+    }
+  }
+
+  .selective-dates {
+    @include Flex(flex, center, center, normal, 20px);
+    .selc-date {
+      @include Btn(
+        solid 2px $c-WhiGl,
+        0px,
+        $c-black,
+        $c-white,
+        pointer,
+        16px
+      ); //$btn-b, $btn-br, $btn-bg, $btn-tc, $btn-cur, $btn-pad
+      @include WiHi(380px, 60px);
+      @include Text(16px, normal, 400, 28px, start, $c-white);
+    }
+    .inp-date {
+      @include Btn(
+        solid 2px $c-WhiGl,
+        0px,
+        $c-black,
+        $c-white,
+        pointer,
+        16px
+      ); //$btn-b, $btn-br, $btn-bg, $btn-tc, $btn-cur, $btn-pad
+      @include WiHi(380px, 60px);
+      @include Text(16px, normal, 400, 28px, start, $c-white);
+    }
+    .inp-time {
+      @include Btn(
+        solid 2px $c-WhiGl,
+        0px,
+        $c-black,
+        $c-white,
+        pointer,
+        16px
+      ); //$btn-b, $btn-br, $btn-bg, $btn-tc, $btn-cur, $btn-pad
+      @include WiHi(380px, 60px);
+      @include Text(16px, normal, 400, 28px, start, $c-white);
+    }
+  }
+}
+
+.absolute-img-circle {
+  @include Pos(absolute, 0, 50px, -30px, none, 99); //$pos, $bt, $rg, $z-i
+}
+//!--------------------------------------------------------------------------------------
+.pop-up {
+  @include PosT(fixed, 0, 0, 99);
+  @include WiHi(100%, 100%);
+  transition: all 1s;
+  background: rgb(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  .pop-up-body {
+    min-height: 100%;
+    @include Flex(flex, center, center, column, 60px);
+    @include PadMarg(30px 10px, 0px);
+    .pop-up-content {
+      max-width: 800px;
+      background: #0c0c0c;
+      border: 1px solid rgba(220, 202, 135, 0.2);
+      @include PadMarg(30px, 0px);
+      @include Flex(flex, center, center, column, 40px);
+      position: relative;
+      color: $c-black;
+
+      .pop-up-texts {
+        @include Flex(flex, center, center, column, 0px);
+        .pop-up-txt-p {
+          @include Text(
+            20px,
+            normal,
+            400,
+            29.9px,
+            center,
+            $c-white
+          ); //$fsz, $fst, $fw, $lh, $ta, $txt-cl
+        }
+        .pop-up-txt-h2 {
+          @include Text(50px, normal, 700, 83.2px, center, $c-lighGl);
+        }
+      }
+      .pop-up-inp-btn {
+        @include Flex(flex, center, center, normal, 20px);
+        .inp-eamil {
+          @include Btn(
+            solid 2px $c-WhiGl,
+            0px,
+            $c-black,
+            $c-white,
+            pointer,
+            16px
+          ); //$btn-b, $btn-br, $btn-bg, $btn-tc, $btn-cur, $btn-pad
+          @include WiHi(380px, 60px);
+          @include Text(16px, normal, 400, 28px, start, $c-white);
+        }
+      }
+      .selective-btn-gold {
+        @include Btn(
+          none,
+          0px,
+          $c-lighGl,
+          $c-black,
+          pointer,
+          8px 32px
+        ); //$btn-b, $btn-br, $btn-bg, $btn-tc, $btn-cur, $btn-pad
+        @include Text(16px, normal, 700, 28px, start, $c-black);
+        transition: all 0.3s;
+
+        &:active {
+          background: none;
+          color: $c-lighGl;
+          border: solid 1px $c-lighGl;
+        }
+      }
+      .pop-up-close {
+        @include PosB(absolute, 0, 30px, 99);
+        @include Flex(flex, center, center, column, 5px);
+        transform: rotate(349deg);
+        top: 30px;
+        .pop-up-cl-l {
+          transform: rotate(325deg);
+          @include PosT(absolute, 0, 0px, 99);
+          cursor: pointer;
+        }
+        .pop-up-cl-r {
+          transform: rotate(240deg);
+          @include PosT(absolute, 0, -5px, 99);
+          cursor: pointer;
+        }
+        .pop-up-close-a {
+          @include PosT(absolute, -10px, 2px, 100);
+          @include Text(16px, normal, 700, 28px, start, $c-lighGl);
+          @include Flex(flex, center, center, column, 0px);
+          @include WiHi(30px, 30px);
+          transform: rotate(100deg);
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .pop-up-area {
+    @include WiHi(100%, 100%);
+    @include PosT(fixed, 0, 0, 0);
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+//!--------------------------------------------------------------------------------------
+
+.about-us {
+  @include Grid(grid, center, center, repeat(2, 1fr), 120px);
+  @include PadMarg(120px 0 0 0, 0px);
+  transition: all 2s;
+  position: relative;
+  .about-us-item {
+    @include Flex(flex, center, center, column, 20px);
+    .about-us-texts {
+      @include Flex(flex, start, start, column, 20px);
+      .about-us-txt-p {
+        @include Text(
+          23px,
+          normal,
+          700,
+          29.9px,
+          start,
+          $c-white
+        ); //$fsz, $fst, $fw, $lh, $ta, $txt-cl
+      }
+      .p {
+        @include Text(
+          16px,
+          normal,
+          400,
+          28px,
+          start,
+          #aaaaaa
+        ); //$fsz, $fst, $fw, $lh, $ta, $txt-cl
+        font-family: "Open Sans", sans-serif;
+        @include PadMarg(0 150px 0 0, 0px);
+      }
+      .about-us-txt-h2 {
+        @include Text(64px, normal, 600, 83.2px, start, $c-lighGl);
+        @include PadMarg(0 95px 0 0, 0px);
+      }
+    }
+  }
+  .absolute-img-circle-b {
+    @include PosT(absolute, -40px, -90px, 98); //$pos, $bt, $rg, $z-i
+  }
+}
+
+.electoral-bloc {
+  @include Flex(flex, center, center, column, 65px);
+  .electoral-texts {
+    @include Flex(flex, center, center, column, 10px);
+    .electoral-txt-p {
+      @include Text(
+        23px,
+        normal,
+        700,
+        29.9px,
+        start,
+        $c-white
+      ); //$fsz, $fst, $fw, $lh, $ta, $txt-cl
+    }
+    .electoral-txt-h2 {
+      @include Text(64px, normal, 600, 83.2px, start, $c-lighGl);
+      @include PadMarg(0 95px 0 0, 0px);
+    }
+  }
+  .electoral-items {
+    @include Flex(flex, center, center, normal, 33px);
+    transition: all 1s;
+    .electoral-item {
+      position: relative;
+      .img-alh {
+        height: 70vh;
+        border: solid 1px $c-lighGl;
+        transition: all 2s;
+      }
+      .img-alh-p {
+        @include Flex(flex, center, center, normal, 33px);
+        @include Text(45px, normal, 600, 58.5px, center, $c-white);
+        @include Pos(absolute, 0, 0, 0, 0, 5);
+      }
+    }
+  }
+}
+
+
+@import "media";

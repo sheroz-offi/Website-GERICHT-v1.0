@@ -1,0 +1,597 @@
+@media (max-width: 1450px) {
+  .selective-date-block {
+    .selective-dates {
+      .selc-date {
+        width: 300px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 300px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 300px;
+        transition: all 2s;
+      }
+    }
+  }
+}
+@media (max-width: 1360px) {
+  .selective-date-block {
+    .selective-dates {
+      .selc-date {
+        width: 250px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 250px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 250px;
+        transition: all 2s;
+      }
+    }
+  }
+  .about-us {
+    gap: 90px;
+    transition: all 2s;
+    .about-us-item {
+      .about-us-texts {
+        .about-us-txt-h2 {
+          padding: 0;
+        }
+        .p {
+          padding: 0;
+        }
+      }
+      .img-viski {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .main {
+    .main-text-restaurant {
+      .main-text-big {
+        font-size: 150px;
+        transition: all 2s;
+      }
+    }
+  }
+  .selective-date-block {
+    .selective-dates {
+      .selc-date {
+        width: 230px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 230px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 230px;
+        transition: all 2s;
+      }
+    }
+  }
+  .about-us {
+    gap: 60px;
+    transition: all 2s;
+    .about-us-item {
+      .img-app-beer {
+        height: 65vh;
+        transition: all 2s;
+      }
+    }
+  }
+  .electoral-bloc {
+    .electoral-items {
+      @include Grid(grid, center, center, repeat(1, 1fr), 20px);
+      transition: all 1s;
+      /* .electoral-item {
+      } */
+    }
+  }
+}
+@media (max-width: 992px) {
+  .header {
+    .burger-menu {
+      display: flex;
+    }
+    .header-right {
+      display: none;
+    }
+    .header-center {
+      display: none;
+    }
+  }
+  .main {
+    .main-img-restaurant {
+      .img-res {
+        height: 90vh;
+      }
+    }
+    .main-small-txt-box {
+      display: none;
+    }
+    .main-text-restaurant {
+      .main-text-big {
+        font-size: 100px;
+      }
+    }
+  }
+  .selective-date-block {
+    .selective-dates {
+      .selc-date {
+        width: 200px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 200px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 200px;
+        transition: all 2s;
+      }
+    }
+  }
+}
+@media (max-width: 860px) {
+  .selective-date-block {
+    .selective-dates {
+      .selc-date {
+        width: 180px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 180px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 180px;
+        transition: all 2s;
+      }
+    }
+  }
+  .about-us {
+    gap: 60px;
+    transition: all 2s;
+    .about-us-item {
+      .img-app-beer {
+        height: 60vh;
+        transition: all 2s;
+      }
+      .about-us-texts {
+        .about-us-txt-h2 {
+          font-size: 55px;
+          line-height: 50px;
+          transition: all 2s;
+        }
+        .p {
+          font-size: 14px;
+          transition: all 2s;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 770px) {
+  .main {
+    .main-img-restaurant {
+      .img-res {
+        height: 80vh;
+      }
+    }
+    .main-small-txt-box {
+      display: none;
+    }
+    .main-text-restaurant {
+      .main-text-big {
+        font-size: 90px;
+      }
+    }
+  }
+  .selective-date-block {
+    .selective-dates {
+      flex-direction: column;
+      .selc-date {
+        width: 400px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 400px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 400px;
+        transition: all 2s;
+      }
+    }
+  }
+  .about-us {
+    @include Flex(flex, center, center, column, 20px);
+    position: relative;
+    gap: 50px;
+    transition: all 2s;
+    .about-us-item {
+      .img-app-beer {
+        height: 40vh;
+        border-radius: 50%;
+        @include WiHi(175px, 187px);
+        @include PosT(absolute, 30px, 190px, 3);
+        border: solid 2px $c-lighGl;
+      }
+      .img-viski {
+        display: flex;
+        height: 40vh;
+        border-radius: 50%;
+        @include WiHi(175px, 200px);
+        @include PosT(absolute, 55px, 310px, 3);
+        border: solid 2px $c-lighGl;
+        transition: all 2s;
+      }
+      .about-us-texts {
+        .about-us-txt-h2 {
+          font-size: 52px;
+          line-height: 45px;
+          transition: all 2s;
+        }
+        .p {
+          font-size: 12px;
+          transition: all 2s;
+        }
+      }
+    }
+  }
+  .electoral-bloc {
+    .electoral-texts {
+      .electoral-txt-h2 {
+        padding: 0;
+        font-size: 52px;
+        line-height: 45px;
+        transition: all 2s;
+        text-align: center;
+      }
+    }
+  }
+  .pop-up {
+    .pop-up-content {
+      min-width: 300px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .main {
+    .main-img-restaurant {
+      .img-res {
+        height: 60vh;
+      }
+    }
+    .main-small-txt-box {
+      display: none;
+    }
+    .main-text-restaurant {
+      .main-text-big {
+        top: 20%;
+        line-height: 60px;
+        font-size: 60px;
+      }
+    }
+  }
+  .selective-date-block {
+    .selective-dates {
+      flex-direction: column;
+      .selc-date {
+        width: 300px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 300px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 300px;
+        transition: all 2s;
+      }
+    }
+  }
+  .selective-date-block {
+    .selective-texts {
+      .selective-txt-p {
+        font-size: 20px;
+      }
+      .selective-txt-h2 {
+        font-size: 50px;
+        line-height: 40px;
+      }
+    }
+  }
+  .about-us {
+    @include Flex(flex, center, center, column, 20px);
+    position: relative;
+    gap: 50px;
+    transition: all 2s;
+    .about-us-item {
+      .img-app-beer {
+        display: none;
+        transition: all 2s;
+      }
+      .img-viski {
+        display: none;
+        transition: all 2s;
+      }
+      .about-us-texts {
+        .about-us-txt-h2 {
+          font-size: 52px;
+          line-height: 45px;
+          transition: all 2s;
+        }
+        .p {
+          font-size: 12px;
+          transition: all 2s;
+        }
+      }
+    }
+  }
+  .electoral-bloc {
+    .electoral-items {
+      @include Grid(grid, center, center, repeat(1, 1fr), 20px);
+      transition: all 1s;
+      .electoral-item {
+        .img-alh {
+          height: 50vh;
+          transition: all 2s;
+        }
+      }
+    }
+    .electoral-texts {
+      .electoral-txt-h2 {
+        padding: 0;
+        font-size: 52px;
+        line-height: 45px;
+        transition: all 2s;
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .main {
+    .main-img-restaurant {
+      .img-res {
+        height: 50vh;
+      }
+    }
+    .main-small-txt-box {
+      display: none;
+    }
+    .main-text-restaurant {
+      .main-text-big {
+        font-size: 50px;
+      }
+    }
+  }
+  .selective-date-block {
+    .selective-dates {
+      flex-direction: column;
+      .selc-date {
+        width: 170px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 170px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 170px;
+        transition: all 2s;
+      }
+    }
+  }
+}
+@media (max-width: 360px) {
+  .header {
+    padding: 10px 0px;
+    .header-left {
+      .header-left-logo {
+        font-size: 28px;
+      }
+    }
+    .burger-menu {
+      .burger-item-l {
+        width: 40px;
+        height: 17px;
+      }
+      .l {
+        display: none;
+      }
+      .burger-item-r {
+        width: 40px;
+        height: 17px;
+      }
+    }
+  }
+  .main {
+    .main-img-restaurant {
+      .img-res {
+        height: 40vh;
+      }
+      .img-text-scroll {
+        display: none;
+      }
+    }
+    .main-small-txt-box {
+      display: none;
+    }
+    .main-text-restaurant {
+      .main-text-big {
+        font-size: 30px;
+        top: 30%;
+      }
+    }
+    .main-small-num-box {
+      transform: rotate(0deg);
+      bottom: -30px;
+      right: 25px;
+    }
+  }
+  .selective-date-block {
+    .selective-dates {
+      flex-direction: column;
+      .selc-date {
+        width: 120px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 120px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 120px;
+        transition: all 2s;
+      }
+    }
+  }
+  .absolute-img-circle {
+    display: none;
+  }
+  .selective-date-block {
+    .selective-texts {
+      .selective-txt-p {
+        font-size: 15px;
+      }
+      .selective-txt-h2 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+  .about-us {
+    .about-us-item {
+      .about-us-texts {
+        .about-us-txt-h2 {
+          font-size: 45px;
+          line-height: 40px;
+          transition: all 2s;
+        }
+        .p {
+          font-size: 10px;
+          transition: all 2s;
+        }
+        .about-us-txt-p {
+          font-size: 19px;
+          transition: all 2s;
+        }
+      }
+    }
+    .absolute-img-circle-b {
+      display: none;
+    }
+  }
+  .electoral-bloc {
+    .electoral-items {
+      @include Grid(grid, center, center, repeat(1, 1fr), 20px);
+      transition: all 1s;
+      .electoral-item {
+        .img-alh {
+          height: 40vh;
+          transition: all 2s;
+        }
+        .img-alh-p {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 280px) {
+  .header {
+    padding: 10px 0px;
+    .header-left {
+      .header-left-logo {
+        font-size: 25px;
+      }
+    }
+    .burger-menu {
+      gap: 0px;
+      .burger-item-l {
+        width: 30px;
+        height: 10px;
+      }
+      .l {
+        display: none;
+      }
+      .burger-item-r {
+        width: 30px;
+        height: 10px;
+      }
+    }
+  }
+  .main {
+    .main-img-restaurant {
+      .img-res {
+        height: 40vh;
+      }
+      .img-text-scroll {
+        display: none;
+      }
+    }
+    .main-small-txt-box {
+      display: none;
+    }
+    .main-text-restaurant {
+      .main-text-big {
+        font-size: 30px;
+        top: 30%;
+      }
+    }
+    .main-small-num-box {
+      transform: rotate(0deg);
+      bottom: -30px;
+      right: 25px;
+    }
+  }
+  .selective-date-block {
+    .selective-dates {
+      flex-direction: column;
+      .selc-date {
+        width: 120px;
+        transition: all 2s;
+      }
+      .inp-date {
+        width: 120px;
+        transition: all 2s;
+      }
+
+      .inp-time {
+        width: 120px;
+        transition: all 2s;
+      }
+    }
+  }
+  .absolute-img-circle {
+    display: none;
+  }
+  .selective-date-block {
+    .selective-texts {
+      .selective-txt-p {
+        font-size: 15px;
+      }
+      .selective-txt-h2 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+}
